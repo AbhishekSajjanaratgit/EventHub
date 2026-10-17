@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'events.middleware.RequestLoggingMiddleware'
 ]
 
 ROOT_URLCONF = 'eventhub.urls'
@@ -125,5 +126,21 @@ STATIC_URL = 'static/'
 MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+    },
+}
+
+# Adding logging settings
+
+LOGGING = {
+    'version' : 1,
+    'disable_existing_loggers' : False,
+    'formatters' : {
+        'simple' : {'format' : '[{asctime}] {levelname} {message}', 'style' : '{'},
+    },
+    'handlers' : {
+        'console' : {'class' : 'logging.StreamHandler', 'formatter' : 'simple'},
+    },
+    'logger' : {
+        'events' : {'handlers' : ['consider'], 'level' : 'INFO'},
     },
 }
