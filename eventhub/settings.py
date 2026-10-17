@@ -140,7 +140,7 @@ LOGGING = {
     'handlers' : {
         'console' : {'class' : 'logging.StreamHandler', 'formatter' : 'simple'},
     },
-    'logger' : {
-        'events' : {'handlers' : ['consider'], 'level' : 'INFO'},
+    'loggers' : {
+        'events' : {'handlers' : ['console'], 'level' : 'INFO'},
     },
 }

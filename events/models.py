@@ -18,7 +18,7 @@ class Event(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['data']
+        ordering = ['date']
 
     def __str__(self):
         return f"{self.title} at {self.venue}"

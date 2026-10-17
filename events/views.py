@@ -38,7 +38,7 @@ class ReservationViewSet(viewsets.ModelViewSet):
         return queryset
 
     @action(detail=True, methods=['post'])
-    def cancle(self, request, pk=None):
+    def cancel(self, request, pk=None):
         reservation = self.get_object()
 
         with transaction.atomic():

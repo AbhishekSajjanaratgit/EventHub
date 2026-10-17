@@ -12,7 +12,7 @@ class RequestLoggingMiddleware:
     def __call__(self, request):
         start_time = time.perf_counter()
         response = self.get_response(request)
-        duration = time.perf_counter() = start_time
+        duration = time.perf_counter() - start_time
 
         logger.info(f"{request.method} {request.path} - {response.status_code} - {duration:.3f}s")
 
