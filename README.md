@@ -515,3 +515,21 @@ These match the project brief's checklist. Small seat counts (e.g. 3) make the o
 ---
 
 ## Postman Test Screenshots
+
+### 1. Successful Reservation (201 Created)
+
+`POST /api/reservations/`: reserving 2 seats for an event with 3 seats. The reservation is created with status `confirmed`.
+
+![Successful reservation - 201 Created](screenshots/01-reservation-201.png)
+
+### 2. Overbooking Failure (400 Bad Request)
+
+`POST /api/reservations/`: requesting 2 seats when only 1 is left. The request is rejected with `"Only 1 seat(s) available."` and no seats are deducted.
+
+![Overbooking failure - 400 Bad Request](screenshots/02-overbooking-400.png)
+
+### 3. Successful Cancellation (200 OK)
+
+`POST /api/reservations/1/cancel/`: cancelling the reservation from step 1. Its status becomes `cancelled` and the 2 seats are returned to the event.
+
+![Successful cancellation - 200 OK](screenshots/03-cancel-200.png)
