@@ -77,11 +77,6 @@ python -m venv .venv
 .venv\Scripts\activate
 ```
 
-macOS/Linux: `source .venv/bin/activate`
-
-> If PowerShell says *"running scripts is disabled"*, run this once and try again:
-> `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`
-
 ### 3. Install dependencies
 
 ```powershell
