@@ -61,12 +61,12 @@ EventHub/
 
 ## How to Run the Project
 
-The commands below are for **Windows PowerShell**. macOS/Linux equivalents are shown where they differ.
+The commands below are for **Windows PowerShell**.
 
 ### 1. Clone the repository and enter the folder
 
 ```powershell
-git clone <repository-url> EventHub
+git clone https://github.com/AbhishekSajjanaratgit/EventHub.git
 cd EventHub
 ```
 
