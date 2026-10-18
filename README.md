@@ -511,3 +511,7 @@ These match the project brief's checklist. Small seat counts (e.g. 3) make the o
 - [ ] Cancel a reservation — `POST /api/reservations/{id}/cancel/` → `200`, and the seats are restored to the event
 - [ ] Filter reservations by event — `GET /api/reservations/?event_id=1`
 - [ ] Middleware logs appear in the terminal for every request
+
+---
+
+## Postman Test Screenshots
